@@ -1,0 +1,144 @@
+---------------------------------------
+Project Overview
+---------------------------------------
+200 Years Together text needs to be broken up in a way that works for an API based 11labs audiobook maker that can use stolen/sniffed premium keys.
+Will share with frens later on, as it can also be used as a base for auto podcast making, which is something a lot of people ask for, like audiobooks, 
+Fuck manually dragging files onto an audacity timeline and proof listening more than once.
+Each new paragraph/empty line between sentences will be a sseperate audio file
+11labs has its own longform/audiobook maker now, but mine generates seperate files in chunks that are labeled numerically, and the text file 
+we use as an input will generate a text file as an output that labels each block of text.That makes fixing errors easy.
+Also comes with an ffmpeg script that stitches everything together with a slight pause.
+
+
+
+11labs Model to use - English v1 (Multilang v2 sounds better, but drifts too quick and isnt consistent with pronounciation)
+
+We will test 1 chapter first, proof listen, and make any auto replace edits needed afterwords (ie Alexander II could be said as Alexander the Second (so replace Alexander II with 'Alexander the Second"))
+When a chapter is done, add that text to the Chapters folder.
+
+Will need Word, LibreOffice, or Openoffice to go through the doc. Easier to Space Headings
+
+
+--------------------------------------
+Edits needed for the text
+--------------------------------------
+
+
+
+Delete Special characters or insertions
+Examples;
+[69] - !!! Copypasting from the pdf atm changes [69] to "*69+. for some reason. If you can auto delete anything within "*  + or after "* , then that could save some time.
+ccxix+
+
+Delete Footnotes, along with the word "Footnotes", usually at the end of chapter - DONE in the word Document
+
+Delete Footnote numbers within paragraphs, 
+
+Inspect any content within brackets, and determine whether or not it should be deleted.
+Examples;
+The Bible said: “Let my 
+people go, that they may hold a feast unto me in the wilderness.” (Ex. 5:1)
+**"Ex. 5:1" wouldnt be auto pronounced as "Exodus 5:1", but that bracketed text could either be deleted completley, or "Ex" changed to "Exodus".
+
+Inspect numbers and Dates and make edits to make the way they are pronounced consistent
+Examples;
+"1972-73" will often vary between being prounced as "Nineteen seventy two Seventy three", and "Nineteen seventy two, to Seventy three". 
+
+[
+The text needs to be brought back together in some parts
+like;
+
+in 1874, we
+can see a marked rise in the number of blah blas occuring, 
+
+in 1874, we can see a marked rise in the number of blah blahs occuring, 
+
+May not be a a problem for the audio making, but it makes shit messy when proof reading
+]
+
+Separate any headings that are lost within the text. (just have the 200 YT pdf next to you as you scroll through the doc, and see if theres a sub heading that needs seperateing with a new line above and below it.
+Add full stops where a pause is needed 
+
+Easiest edist to make first will be just looking for numbers and symbols that stick out. A random "1", the number for a footnote etc.
+
+------------------
+This is good - 
+------------------
+
+What could the remaining residents of “totalitarian Moscow” think? There was a great 
+variety of responses, from grievance (“You, Jews, are allowed to leave and we aren’t…”) to 
+the despair of intellectuals. L.K Chukovksaya expressed it in conversation to me: “Dozens of 
+valuable people are leaving, and as a result human bonds vital for the country are ripped 
+apart. The knots that hold together the fabric of culture are being undone.”
+
+
+If you just read the last sentence, and the beginning of the next sentence/paragraph, is that where youd want a pause?
+
+
+------------------
+This is Too Long
+------------------
+We can read the thoughtful comments of an emigrant Jewish author about this Departure: 
+“Russian Jewry were pathfinders in their experiment to merge with the Russian people and 
+Russian culture, they became involved in Russia’s fate and history, and, repulsed away as if 
+by a similarly charged body, left.” (What an accurate and penetrating comparison!) “What is 
+most stunning about this Departure is how, at the moment of greatest assimilation, 
+voluntary it was…. The pathetic character of the Russian Aliyah of the 1970s … was that we 
+were not exiled from the country on a king’s order or by the decision of party and parliament, 
+and we were not fleeing to save ourselves from the whips of an enraged popular pogrom … 
+this fact is not immediately obvious to the participants in this historical event.”*71+
+No doubt, the Jewish emigration from the USSR ushered in a great historical shift. The 
+beginning of the Exodus drew a line under an epoch lasting two centuries of coerced coexistence between Jews and Russians. From that point every Soviet Jew was free to choose 
+for himself — to live in Russia or outside it. By the second half of the 1980s each was entirely 
+free to leave for Israel without struggle. 
+
+
+[EXAMPLE - Unmodified Text]
+When in 1972-73 more than 30,000 Soviet Jews had left for Israel per year, Golda Meir used 
+to meet them personally at the airport and wept, and the Israeli press called their mass 
+arrivals “the Miracle of the 20th century.” Back then “everyone left for Israel. Those who 
+took the road to Rome,” that is to say not to Israel, “were pointed out. But then the number 
+of arrivals started to fall from year to year. It decreased from tens of thousands to thousands, 
+from thousands to hundreds, from hundreds to a few lone individuals. In Vienna, it was no 
+longer those taking the road to Rome [the next stop on the road to the final desired 
+destination, usually the U.S.] who were pointed out, it was those ‘loners,’ those ‘clowns,’ 
+those ‘nuts,’ who still left for Israel.”*43+ “Back then Israel used to be the ‘norm’ and you had 
+to explain why you were going ‘past’ it, but it was the other way round now: it was those 
+planning to leave for Israel that often had to explain their decision.”*44+
+“Only the first wave was idealistic”; “starting with 1974, so to speak the second echelon of 
+Jews began to leave the USSR, and for those Israel might have been attractive, but mainly 
+from a distance.”*45+ Another’s consideration: “Perhaps the phenomenon of neshira 
+[neshira – dispersal on the way to Israel; noshrim – the dispersed ones] is somehow 
+connected to the fact that initial emigration used to be from the hinterlands [of the USSR], 
+where *Jewish+ traditions were strong, and now it’s more from the centre, where Jews have 
+substantially sundered themselves from their traditions.”*46+ 
+
+[EXAMPLE - Modified Text]
+
+When in 1972 to 73 more than 30,000 Soviet Jews had left for Israel per year, Golda Meir used 
+to meet them personally at the airport and wept, and the Israeli press called their mass 
+arrivals “the Miracle of the 20th century.” Back then “everyone left for Israel. Those who 
+took the road to Rome,” that is to say not to Israel, “were pointed out. But then the number 
+of arrivals started to fall from year to year. 
+
+[The above is a good length, and it breaks the text at a normal sounding point to break it.
+
+It decreased from tens of thousands to thousands, from thousands to hundreds, from hundreds to a few lone individuals. In Vienna, it was no 
+longer those taking the road to Rome [the next stop on the road to the final desired 
+destination, usually the U.S.] who were pointed out, it was those ‘loners,’ those ‘clowns,’ 
+those ‘nuts,’ who still left for Israel.
+
+Back then Israel used to be the ‘norm’ and you had 
+to explain why you were going ‘past’ it, but it was the other way round now: it was those 
+planning to leave for Israel that often had to explain their decision.
+Only the first wave was idealistic, starting with 1974, so to speak the second echelon of 
+Jews began to leave the USSR, and for those Israel might have been attractive, but mainly 
+from a distance.
+
+Another’s consideration, “Perhaps the phenomenon of Neshira, 
+[neshira – dispersal on the way to Israel; noshrim – the dispersed ones] is somehow 
+connected to the fact that initial emigration used to be from the hinterlands [of the USSR], 
+where Jewish traditions were strong, and now it’s more from the centre, where Jews have 
+substantially sundered themselves from their traditions.
+
+
